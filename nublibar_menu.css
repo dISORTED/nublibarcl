@@ -671,5 +671,27 @@ footer .footer-links a {
     margin-bottom: 1rem;
   }
 }
+/* — Alineación de botones en Planes — */
+#precios .benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+#precios .benefit.plan {
+  display: flex;
+  flex-direction: column;
+}
+
+#precios .benefit.plan p {
+  /* Empuja el botón hacia abajo */
+  flex-grow: 1;
+}
+
+#precios .benefit.plan .btn-plan {
+  margin-top: auto;
+  align-self: center;
+}
 
 
