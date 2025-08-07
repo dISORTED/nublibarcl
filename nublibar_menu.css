@@ -137,7 +137,6 @@ img {
 .hero .cta a {
   background: #00f0b8;
   color: #1e1e1e;
-  text-shadow: none;
   padding: 1rem 5rem;
   border-radius: 5px;
   font-weight: bold;
@@ -256,38 +255,26 @@ footer .footer-links a {
 /* ===========================
    Planes
    =========================== */
-.plan-icon {
-  width: 140px;
-  height: 100px;
-  object-fit: contain;
-  margin: 0 auto 1.5rem;
-  transition: transform 0.3s ease;
+#precios .benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
-.plan-icon:hover {
-  transform: scale(1.1);
+
+#precios .benefit.plan {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.btn-plan {
-  display: inline-block;
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  background-color: #00f0b8;
-  color: #333;
-  border: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
+
+#precios .benefit.plan p {
+  flex-grow: 1;
 }
-.btn-plan:hover {
-  background-color: #00cfa1;
-}
-.plan-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: -1rem 0 0.8rem;
-  color: #333;
+
+#precios .benefit.plan .btn-plan {
+  margin-top: auto;
+  align-self: center;
 }
 
 /* ===========================
@@ -297,6 +284,7 @@ footer .footer-links a {
   padding: 60px 20px;
   background-color: #f9f9f9;
 }
+/* ... resto del CSS ... */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -671,27 +659,6 @@ footer .footer-links a {
     margin-bottom: 1rem;
   }
 }
-/* — Alineación de botones en Planes — */
-#precios .benefits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-}
 
-#precios .benefit.plan {
-  display: flex;
-  flex-direction: column;
-}
-
-#precios .benefit.plan p {
-  /* Empuja el botón hacia abajo */
-  flex-grow: 1;
-}
-
-#precios .benefit.plan .btn-plan {
-  margin-top: auto;
-  align-self: center;
-}
 
 
