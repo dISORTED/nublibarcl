@@ -1,0 +1,22 @@
+name: Build PDFs
+on:
+  push:
+    paths: ["README.md", "runbook/OPERACION.md", ".github/workflows/build-pdf.yml"]
+  workflow_dispatch:
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    container: pandoc/extra:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build README.pdf
+        run: pandoc README.md -o artifacts/README.pdf
+      - name: Build RUNBOOK.pdf
+        run: |
+          mkdir -p artifacts
+          pandoc runbook/OPERACION.md -o artifacts/RUNBOOK.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: artifacts
