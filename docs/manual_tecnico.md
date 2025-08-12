@@ -1,193 +1,194 @@
-Nublibar
-Portada
-Manual de Tecnico
-Dolibarr ERP en la Nube
-Plataforma: DoliCloud
-Versión: 1.0
-Elaborado por: Sebastián Echeverría
-Fecha: Agosto 2025
-________________________________________
-Índice
-1.	Introducción y primeros pasos
+⚙️ Manual Técnico – Dolibarr ERP en la Nube
+📋 Descripción
+Este manual está dirigido a administradores técnicos del sistema Dolibarr ERP/CRM ejecutado en la plataforma DoliCloud.
+Proporciona instrucciones para la configuración inicial, administración de módulos, gestión de usuarios y mantenimiento general.
 
-2.	Configuración inicial
+🖥️ Introducción y primeros pasos
+Dolibarr ERP es una solución open source modular que cubre ventas, compras, inventarios, finanzas, proyectos y CRM.
+En DoliCloud, ofrece alta disponibilidad, backups automáticos y actualizaciones sin intervención.
 
-3.	Módulos esenciales
+🌐 Acceso al sistema
+URL: https://<su-empresa>.dolicloud.com
 
-4.	Flujos de ventas y compras
+Usuario administrador: (Definido en instalación)
 
-5.	Gestión financiera
+Contraseña: (Guardar en gestor de contraseñas)
 
-6.	Configuraciones avanzadas
+Perfiles y roles:
 
-7.	Apéndice por caso de uso
+🛠 Administrador – Control total de módulos, usuarios y configuración global.
 
-8.	Soporte y mantenimiento
-________________________________________
+📦 Comercial – Gestión de clientes, presupuestos y ventas.
 
+💰 Finanzas – Acceso a caja, bancos e informes contables.
 
+⚙️ Personalizado – Configurable en Configuración → Permisos → Roles.
 
-1. Introducción y primeros pasos
-Dolibarr ERP es una solución open source modular que cubre todas las necesidades de gestión de una empresa: ventas, compras, inventarios, finanzas, proyectos y CRM. Ejecutado en DoliCloud, ofrece alta disponibilidad, backups automáticos y actualizaciones sin intervención del usuario.
-1.1 Acceso al sistema
-●	Abra su navegador y vaya a https://<su-empresa>.dolicloud.com.
+⚙️ Configuración inicial
+🏢 Parámetros de empresa
+Ruta: Inicio → Configuración → Empresa/Sociedad
 
-●	Ingrese sus credenciales (usuario y contraseña).
+RUT/NIF, nombre, dirección y contacto.
 
-●	En caso de olvido, haga clic en “¿Olvidó su contraseña?” y siga los pasos para restablecerla.
-1.2 Perfiles y roles de usuario
-●	Administrador: controla módulos, usuarios y configuración global.
+Logo corporativo (.png, .jpg, .svg).
 
-●	Comercial: gestiona clientes, presupuestos y ventas.
+Moneda y decimales.
 
-●	Finanzas: accede a caja, bancos e informes contables.
+🌍 Localización y formatos
+Ruta: Inicio → Configuración → Localización
 
-●	Personalizado: puede crear roles a medida en: Configuración > Permisos > Roles.
-1.3 Interfaz y navegación básica
-1.	Barra superior: pestañas de módulos activos (Inicio, Ventas, Stock, Facturación, etc.).
+País, moneda, zona horaria.
 
-2.	Menú lateral: subopciones del módulo activo.
+Formato de fecha/hora.
 
-3.	Buscador global: búsqueda rápida por referencias, nombres o números.
-________________________________________
+🔢 Series de numeración
+Ruta: Configuración → Numeración de documentos
 
-2. Configuración inicial
-Antes de operar, configure datos de su empresa y formatos.
-2.1 Parámetros de la empresa
-Ruta: Inicio > Configuración > Empresa/Sociedad.
-- RUT/NIF, nombre, dirección y contacto.
-- Cargue logo corporativo (.png, .jpg o .svg).
-- Defina moneda y decimales.
-2.2 Idioma, zona horaria y formatos
-Ruta: Inicio > Configuración > Localización.
-- Elija país, moneda y zona horaria.
-- Ajuste formato de fecha (DD-MM-YYYY, etc.) y hora.
-2.3 Series de numeración
-Ruta: Configuración > Numeración de documentos.
-- Configure prefijos y longitud para facturas (FAC-0001), pedidos (PED-0001) y presupuestos (PRE-0001).
-2.4 Plantillas de documentos
-Ruta: Configuración > Plantillas.
-- Importe plantillas .odt o .docx.
-- Asocie a tipo de documento (factura, albarán, presupuesto).
-2.5 Usuarios y grupos
-Ruta: Configuración > Usuarios.
-- Cree nuevos usuarios y asignarles rol.
-- Organice en grupos (ventas, finanzas, almacén).
-________________________________________
+Prefijos y longitud para facturas (FAC-0001), pedidos (PED-0001), presupuestos (PRE-0001).
 
+📄 Plantillas de documentos
+Ruta: Configuración → Plantillas
 
-3. Módulos esenciales
-3.1 Productos y servicios
-Ruta: Productos/Servicios > Nuevo producto.
-1. Introduzca nombre, código y categoría.
-2. Defina precio de coste y venta, unidad de medida.
-3. Agregue foto, descripción detallada y atributos.
-3.2 Inventario
-Ruta: Stock > Control de stock.
-- Visualice existencias por almacén.
-- Registre movimientos manuales (+/-) indicando motivo.
-- Active alerta de stock mínimo para reorden automático.
-3.3 Facturación
-Ruta: Facturación > Nueva factura.
-1. Seleccione cliente o cree uno nuevo.
-2. Añada productos/servicios y aplique descuentos.
-3. Genere PDF y envíe por email con plantilla.
-3.4 Terceros y clientes (CRM)
-Ruta: Contactos > Nuevo tercero.
-- Cree ficha de cliente o proveedor con datos fiscales.
-- Asocie facturas, pedidos y proyectos.
-3.5 Informes y reportes
-Ruta: Informes > Ventas / Stock.
-- Filtre por período, cliente o producto.
-- Exporte a Excel/PDF o programe envíos automáticos.
-________________________________________
+Subir plantillas .odt o .docx.
 
+Asociar a tipo de documento.
 
+👥 Usuarios y grupos
+Ruta: Configuración → Usuarios
 
-4. Flujos de ventas y compras
-4.1 Ciclo completo de ventas
-1.	Presupuesto: Ventas > Presupuestos > Nuevo.
+Crear usuarios, asignar roles y agrupar por área.
 
-2.	Pedido de cliente: transforme presupuesto en pedido.
+🧩 Módulos esenciales
+📦 Productos y servicios
+Ruta: Productos/Servicios → Nuevo producto
 
-3.	Albarán: crea albarán para registro de entrega.
+Nombre, código, categoría.
 
-4.	Factura: convierta albarán en factura y registre cobro en Caja/Bancos.
-4.2 Ciclo completo de compras
-1.	Solicitud de proveedor: Compras > Pedidos de proveedor > Nuevo.
+Precio de coste y venta, unidad.
 
-2.	Recepción: valide mercancía en Stock > Recepciones.
+Foto, descripción, atributos.
 
-3.	Factura proveedor: contabilice factura y programe pago.
-________________________________________5. Gestión financiera
-5.1 Caja y bancos
-Ruta: Banca/Caja > Nueva cuenta bancaria.
-- Registre movimientos de ingreso/egreso.
-- Conciliación: importe extracto y asocie movimientos.
-5.2 Gastos y pagos
-Ruta: Gastos > Nuevo gasto.
-- Documente facturas recibidas, anticipos y gastos varios.
-- Ejecución de pagos y vinculación a facturas.
-5.3 Contabilidad básica
-Ruta: Contabilidad > Plan contable.
-- Defina cuentas y organícese por grupos.
-- Generación de balances y libro diario.
-________________________________________
-6. Configuraciones avanzadas
-6.1 Gestión de módulos y permisos
-Ruta: Configuración > Módulos.
-- Active/desactive módulos según necesidad.
-- En Permisos > Roles ajuste accesos a cada módulo.
-6.2 Integraciones y API
-●	API REST: habilite en Configuración > API, genere token en perfil.
+🏭 Inventario
+Ruta: Stock → Control de stock
 
-●	Mailchimp: configure clave en Módulos > Mailchimp.
+Existencias por almacén.
 
-●	Shopify: instale plugin y configure webhooks en Shopify.
-6.3 Personalizaciones y notificaciones
-●	Plantillas de correo: Configuración > Correo > Plantillas.
+Movimientos manuales (+/-).
 
-●	Acciones programadas: use Cronjobs para tareas repetitivas.
-________________________________________
-7. Apéndice por caso de uso
-7.1 CroquetasSur
-●	Objetivo: mejorar control de inventario y ventas.
+Alerta de stock mínimo.
 
-●	Módulos usados: Productos, Stock, Facturación.
+🧾 Facturación
+Ruta: Facturación → Nueva factura
 
-●	Implementación:
-o	Alta de catálogo de productos
+Seleccionar cliente.
 
-o	Configuración de almacén único
+Añadir productos/servicios y descuentos.
 
-o	Flujo ventas → albarán → factura
+Generar PDF y enviar por email.
 
-●	Resultados: stock actualizado en tiempo real, reportes semanales de ventas.
+👤 CRM – Terceros y clientes
+Ruta: Contactos → Nuevo tercero
 
+Datos fiscales.
 
-7.2 FábricaTextil
-●	Objetivo: seguimiento de proyectos de confección.
+Asociar facturas, pedidos, proyectos.
 
-●	Módulos usados: Proyectos, Tareas, Finanzas.
+📊 Informes y reportes
+Ruta: Informes → Ventas / Stock
 
-●	Resultados: seguimiento de tiempos, control de costes, facturación eficiente.
-7.3 Consultora XYZ
-●	Objetivo: facturación de servicios profesionales.
+Filtrar por período, cliente o producto.
 
-●	Módulos usados: Terceros, Facturación, Informes.
+Exportar a Excel/PDF o programar envío.
 
-●	Resultados: informes de rentabilidad por cliente y proyecto.
-________________________________________
-8. Soporte y mantenimiento
-8.1 Actualizaciones en DoliCloud
-DoliCloud aplica parches y actualizaciones sin downtime cada mes.
-8.2 Copias de seguridad
-Backups automáticos diarios con retención de 30 días.
-8.3 Recursos adicionales
-●	Wiki Dolibarr: https://wiki.dolibarr.org
+🔄 Flujos de trabajo
+🛒 Ciclo de ventas
+Presupuesto → Pedido de cliente → Albarán → Factura.
 
-●	Foro oficial: https://www.dolibarr.org/forum
+Registrar cobro en Caja/Bancos.
 
-●	Código fuente: https://github.com/Dolibarr
-________________________________________
-Fin del Manual de Usuario 
+📥 Ciclo de compras
+Pedido a proveedor.
+
+Recepción en Stock.
+
+Factura de proveedor y pago.
+
+💰 Gestión financiera
+🏦 Caja y bancos
+Ruta: Banca/Caja → Nueva cuenta bancaria
+
+Movimientos de ingreso/egreso.
+
+Conciliación con extractos.
+
+💳 Gastos y pagos
+Ruta: Gastos → Nuevo gasto
+
+Registrar facturas recibidas y anticipos.
+
+Programar pagos.
+
+📚 Contabilidad básica
+Ruta: Contabilidad → Plan contable
+
+Definir cuentas.
+
+Balances y libro diario.
+
+🛠️ Configuraciones avanzadas
+🧩 Gestión de módulos y permisos
+Ruta: Configuración → Módulos
+
+Activar/desactivar módulos.
+
+Ajustar permisos en Permisos → Roles.
+
+🔗 Integraciones y API
+API REST: Configuración → API → Generar token.
+
+Mailchimp: Configurar clave.
+
+Shopify: Instalar plugin y configurar webhooks.
+
+✉️ Personalizaciones y notificaciones
+Plantillas de correo: Configuración → Correo → Plantillas.
+
+Acciones programadas: Cronjobs.
+
+📂 Casos de uso
+CroquetasSur
+
+Objetivo: Control de inventario y ventas.
+
+Módulos: Productos, Stock, Facturación.
+
+Resultado: Stock en tiempo real y reportes semanales.
+
+FábricaTextil
+
+Objetivo: Seguimiento de proyectos.
+
+Módulos: Proyectos, Tareas, Finanzas.
+
+Resultado: Control de tiempos y costes.
+
+Consultora XYZ
+
+Objetivo: Facturación de servicios.
+
+Módulos: Terceros, Facturación, Informes.
+
+Resultado: Rentabilidad por cliente y proyecto.
+
+🛡️ Soporte y mantenimiento
+Actualizaciones: Aplicadas automáticamente por DoliCloud mensualmente.
+
+Backups: Diarios, retención de 30 días.
+
+Recursos:
+
+Wiki Dolibarr
+
+Foro Dolibarr
+
+GitHub Dolibarr
