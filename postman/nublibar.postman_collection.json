@@ -1,0 +1,88 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-47a8-9abc-def012345678",
+    "name": "Nublibar – Dolibarr API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Colección base para consultar la API de Dolibarr (DoliCloud). Usa variables de entorno."
+  },
+  "item": [
+    {
+      "name": "Auth – Ping",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "DOLAPIKEY", "value": "{{DOLAPIKEY}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}/api/index.php/ping",
+          "host": ["{{BASE_URL}}"],
+          "path": ["api", "index.php", "ping"]
+        }
+      }
+    },
+    {
+      "name": "Thirdparties – Listar clientes",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "DOLAPIKEY", "value": "{{DOLAPIKEY}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}/api/index.php/thirdparties?sortfield=t.rowid&sortorder=ASC&limit=50",
+          "host": ["{{BASE_URL}}"],
+          "path": ["api", "index.php", "thirdparties"],
+          "query": [
+            {"key": "sortfield", "value": "t.rowid"},
+            {"key": "sortorder", "value": "ASC"},
+            {"key": "limit", "value": "50"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Products – Listar productos",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "DOLAPIKEY", "value": "{{DOLAPIKEY}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}/api/index.php/products?limit=50",
+          "host": ["{{BASE_URL}}"],
+          "path": ["api", "index.php", "products"],
+          "query": [{"key":"limit","value":"50"}]
+        }
+      }
+    },
+    {
+      "name": "Invoices – Ventas del mes (emitidas)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "DOLAPIKEY", "value": "{{DOLAPIKEY}}" },
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "{{BASE_URL}}/api/index.php/invoices?limit=500&sortfield=t.datef&sortorder=DESC&sqlfilters=(t.datef:%3E%3D:'{{MONTH_START}}')%20and%20(t.datef:%3C%3D:'{{MONTH_END}}')",
+          "host": ["{{BASE_URL}}"],
+          "path": ["api", "index.php", "invoices"],
+          "query": [
+            {"key": "limit", "value": "500"},
+            {"key": "sortfield", "value": "t.datef"},
+            {"key": "sortorder", "value": "DESC"},
+            {"key": "sqlfilters", "value": "(t.datef:>='{{MONTH_START}}') and (t.datef:<='{{MONTH_END}}')"}
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "BASE_URL", "value": "https://YOUR-SUBDOMAIN.dolicloud.com" },
+    { "key": "DOLAPIKEY", "value": "REEMPLAZA-CON-TU-API-KEY" },
+    { "key": "MONTH_START", "value": "2025-08-01" },
+    { "key": "MONTH_END", "value": "2025-08-31" }
+  ]
+}
