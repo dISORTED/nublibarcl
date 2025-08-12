@@ -1,6 +1,6 @@
-Manual de Tecnico de Dolibarr ERP en Nublibar
+Nublibar
 Portada
-Manual de Usuario
+Manual de Tecnico
 Dolibarr ERP en la Nube
 Plataforma: DoliCloud
 Versión: 1.0
